@@ -1,0 +1,36 @@
+# REST
+
+# Login
+POST http://localhost:9092/admin/login
+Content-Type: application/json
+
+{
+    "email": "kunut-t@rmutp.ac.th",
+    "password": "GF261147gf",
+    "rememberMe": false
+}
+
+### Register
+POST http://localhost:9092/admin/register-admin
+Content-Type: application/json
+
+{
+    "firstname": "Kunut",
+    "lastname": "Theerakit",
+    "email": "kunut-t@rmutp.ac.th",
+    "password": "GF261147gf"
+}
+
+
+### Forgot Password
+POST http://localhost:9092/admin/forgot-password
+Content-Type: application/json
+
+{
+    "email": "kunut-t@rmutp.ac.th"
+}
+
+
+### Profile
+GET http://localhost:9092/admin/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg3NTAzNTA4LCJleHAiOjE3OTAwOTU1MDh9.d56oeTaKeT_Ek_99YPm7x8eAS4lGOw-TygFSD7q0wZk
