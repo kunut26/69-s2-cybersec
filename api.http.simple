@@ -1,5 +1,6 @@
 # REST
 
+<<<<<<< HEAD
 ## Variables
 @admin_email = {{$dotenv ADMIN_EMAIL}}
 @admin_password = {{$dotenv ADMIN_PASSWORD}}
@@ -34,6 +35,11 @@
 
 ## 1. Admin
 # 1.1Login (Admin)
+=======
+### Admin
+
+# Login
+>>>>>>> ea89b770398fd025d1594c34bd99328a00e7c236
 POST http://localhost:9092/admin/login
 Content-Type: application/json
 
@@ -74,35 +80,61 @@ Content-Type: application/json
 
 ### 1.4 Profile
 GET http://localhost:9092/admin/users/me
+<<<<<<< HEAD
 Authorization: Bearer {{token_admin_profile}}
 
 
 ## 2.User
 ### 2.1 Login
+=======
+Authorization: Bearer {YOUR_JWT_TOKEN}
+
+## User
+
+###  Login
+>>>>>>> ea89b770398fd025d1594c34bd99328a00e7c236
 POST http://localhost:9092/api/auth/local
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
     "identifier": "{{user_email}}",
     "password": "{{user_password}}"
 }
 
 
 ### 2.2 Register
+=======
+    "identifier": "",
+    "password": ""
+}
+
+### Register
+>>>>>>> ea89b770398fd025d1594c34bd99328a00e7c236
 POST http://localhost:9092/api/auth/local/register
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
     "username": "{{signUp_user_username}}",
     "email": "{{signUp_user_email}}",
     "password": "{{signUp_user_password}}"
 }
 
 ### 2.3 Forgot Password
+=======
+    "username": "",
+    "email": "",
+    "password": ""
+}
+
+### Forgot Password
+>>>>>>> ea89b770398fd025d1594c34bd99328a00e7c236
 POST http://localhost:9092/api/auth/forgot-password
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
     "email": "{{user_email}}"
 }
 
@@ -219,3 +251,11 @@ Content-Type: application/json
         "name": "{{update_teacher_name}}"
     }
 }
+=======
+    "email": ""
+}
+
+### Profile
+GET http://localhost:9092/api/users/me
+Authorization: Bearer {YOUR_JWT_TOKEN}
+>>>>>>> ea89b770398fd025d1594c34bd99328a00e7c236
